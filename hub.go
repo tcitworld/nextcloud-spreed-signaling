@@ -162,6 +162,8 @@ type Hub struct {
 
 	rpcServer  *GrpcServer
 	rpcClients *GrpcClients
+
+	dnsMonitor *DnsMonitor
 }
 
 func NewHub(config *goconf.ConfigFile, events AsyncEvents, rpcServer *GrpcServer, rpcClients *GrpcClients, etcdClient *EtcdClient, r *mux.Router, version string) (*Hub, error) {
